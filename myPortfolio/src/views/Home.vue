@@ -2,7 +2,6 @@
 import {onMounted, ref} from "vue";
 import SvgIcon from "@jamescoyle/vue-icon";
 import {mdiLaptop} from "@mdi/js";
-import portfolioFoto from '../../public/portfoliofoto.jpg';
 
 const messages = [
   "React",
@@ -49,7 +48,7 @@ onMounted(() => {
     </div>
     <div class="flex justify-center md:justify-end">
       <img
-          :src="portfolioFoto"
+          src="/portfoliofoto.jpg"
           alt="Portfolio"
           class="w-48 sm:w-60 md:w-72 lg:w-80 rounded-full shadow-md border border-neutral-200 object-cover"
       />
