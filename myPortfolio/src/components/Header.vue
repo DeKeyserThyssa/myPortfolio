@@ -55,7 +55,7 @@ function toggleMenu() {
       </RouterLink>
 
       <a
-          href="../../public/ThyssaDeKeyserResume.pdf" download
+          href="/ThyssaDeKeyserResume.pdf" download
           class="px-3 py-1.5 rounded-xl bg-[#E6EEDB] text-black flex items-center gap-2 hover:bg-[#d9e4c9]"
       >
         Resume
@@ -96,7 +96,7 @@ function toggleMenu() {
         </RouterLink>
 
         <a
-            href="../../public/ThyssaDeKeyserResume.pdf" download
+            href="/ThyssaDeKeyserResume.pdf" download
             class="px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-700 flex items-center gap-2"
             @click="isMenuOpen = false"
         >
