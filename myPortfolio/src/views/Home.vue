@@ -2,7 +2,7 @@
 import {onMounted, ref} from "vue";
 import SvgIcon from "@jamescoyle/vue-icon";
 import {mdiLaptop} from "@mdi/js";
-import portfolioFoto from '../assets/portfoliofoto.jpg';
+import portfolioFoto from '../../public/portfoliofoto.jpg';
 
 const messages = [
   "React",
