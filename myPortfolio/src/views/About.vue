@@ -54,7 +54,7 @@
     in building scalable and user-focused digital solutions.
     I hold a degree in
     <a href="https://mct.be/"
-    ><span class="font-bold text-[#3A5A40] hover:underline">MCT (Multimedia & Creative Technologies)</span></a
+    ><span class="font-bold text-[#3A5A40] dark:text-[#B5C99A] hover:underline">MCT (Multimedia & Creative Technologies)</span></a
     >
     from Howest University in Kortrijk.
   </p>
@@ -77,45 +77,45 @@
 
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
     <div>
-      <h2 class="font-bold text-[#3A5A40] mb-2">Frontend</h2>
+      <h2 class="font-bold text-[#3A5A40] dark:text-[#B5C99A] mb-2">Frontend</h2>
       <ul>
-        <li v-for="skill in frontendSkills" :key="skill" class="text-[#344E41] font-semibold uppercase">
+        <li v-for="skill in frontendSkills" :key="skill" class="text-[#3A5A40] dark:text-[#B5C99A] font-semibold uppercase">
           {{ skill }}
         </li>
       </ul>
     </div>
 
     <div>
-      <h2 class="font-bold text-[#3A5A40] mb-2">Design</h2>
+      <h2 class="font-bold text-[#3A5A40] dark:text-[#B5C99A] mb-2">Design</h2>
       <ul>
-        <li v-for="skill in designSkills" :key="skill" class="text-[#344E41] font-semibold uppercase">
+        <li v-for="skill in designSkills" :key="skill" class="text-[#3A5A40] dark:text-[#B5C99A] font-semibold uppercase">
           {{ skill }}
         </li>
       </ul>
     </div>
 
     <div>
-      <h2 class="font-bold text-[#3A5A40] mb-2">Backend</h2>
+      <h2 class="font-bold text-[#3A5A40] dark:text-[#B5C99A] mb-2">Backend</h2>
       <ul>
-        <li v-for="skill in backendSkills" :key="skill" class="text-[#344E41] font-semibold uppercase">
+        <li v-for="skill in backendSkills" :key="skill" class="text-[#3A5A40] dark:text-[#B5C99A] font-semibold uppercase">
           {{ skill }}
         </li>
       </ul>
     </div>
 
     <div>
-      <h2 class="font-bold text-[#3A5A40] mb-2">Other Skills</h2>
+      <h2 class="font-bold text-[#3A5A40] dark:text-[#B5C99A] mb-2">Other Skills</h2>
       <ul>
-        <li v-for="skill in otherSkills" :key="skill" class="text-[#344E41] font-semibold uppercase">
+        <li v-for="skill in otherSkills" :key="skill" class="text-[#3A5A40] dark:text-[#B5C99A] font-semibold uppercase">
           {{ skill }}
         </li>
       </ul>
     </div>
 
     <div>
-      <h2 class="font-bold text-[#3A5A40] mb-2">Personal Skills</h2>
+      <h2 class="font-bold text-[#3A5A40] dark:text-[#B5C99A] mb-2">Personal Skills</h2>
       <ul>
-        <li v-for="skill in personalSkills" :key="skill" class="text-[#344E41] font-semibold uppercase">
+        <li v-for="skill in personalSkills" :key="skill" class="text-[#3A5A40] dark:text-[#B5C99A] font-semibold uppercase">
           {{ skill }}
         </li>
       </ul>
