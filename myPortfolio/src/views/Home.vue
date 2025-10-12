@@ -46,6 +46,13 @@ onMounted(() => {
         <span class="font-bold">{{ message }}</span>
       </h3>
     </div>
+    <div class="flex justify-center md:justify-end">
+      <img
+          src="/portfoliofoto.jpg"
+          alt="Portfolio"
+          class="w-48 sm:w-60 md:w-72 lg:w-80 rounded-full shadow-md border border-neutral-200 object-cover"
+      />
+    </div>
   </section>
 </template>
 
