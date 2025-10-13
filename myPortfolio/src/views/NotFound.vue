@@ -10,7 +10,7 @@
     </p>
     <RouterLink
         to="/"
-        class="px-4 py-2 bg-[#E6EEDB] text-black flex items-center gap-2 hover:bg-[#d9e4c9] rounded-lg"
+        class="px-4 py-2 bg-button text-black flex items-center gap-2 hover:bg-buttonHover rounded-lg"
     >
       Go Home
     </RouterLink>

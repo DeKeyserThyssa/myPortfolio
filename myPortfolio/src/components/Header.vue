@@ -1,6 +1,7 @@
 <script setup>
 import Logo from "@/components/logo.vue";
 import { ref, onMounted, watch } from "vue";
+import { useRoute } from "vue-router";
 import SvgIcon from "@jamescoyle/vue-icon";
 import {
   mdiWhiteBalanceSunny,
@@ -12,6 +13,7 @@ import {
 
 const isDark = ref(false);
 const isMenuOpen = ref(false);
+const route = useRoute();
 
 // Load theme preference
 onMounted(() => {
@@ -44,19 +46,26 @@ function toggleMenu() {
 
 <template>
   <nav class="relative flex items-center justify-between px-6 py-3 border-b border-gray-200 dark:border-neutral-600">
-    <RouterLink to="/" class="flex items-center space-x-2 text-[#718355] dark:text-[#A6D5A8]">
+    <RouterLink to="/" class="flex items-center space-x-2">
       <Logo />
     </RouterLink>
 
     <!-- Desktop Menu -->
     <div class="hidden md:flex items-center space-x-6 text-sm font-medium">
-      <RouterLink to="/about" class="hover:text-[#3A5A40] dark:hover:text-[#B5C99A]">
+      <RouterLink to="/about" class="hover:text-accentText dark:hover:text-darkAccentText"
+       :class="route.path === '/about' ? 'text-accentText dark:text-darkAccentText font-semibold' : ''"
+      >
         About
+      </RouterLink>
+      <RouterLink to="/experience" class="hover:text-accentText dark:hover:text-darkAccentText"
+        :class="route.path === '/experience' ? 'text-accentText dark:text-darkAccentText font-semibold' : ''"
+      >
+        Experience
       </RouterLink>
 
       <a
           href="/ThyssaDeKeyserResume.pdf" download
-          class="px-3 py-1.5 rounded-xl bg-[#E6EEDB] text-black flex items-center gap-2 hover:bg-[#d9e4c9]"
+          class="px-3 py-1.5 rounded-xl bg-button text-black flex items-center gap-2 hover:bg-buttonHover"
       >
         Resume
         <SvgIcon type="mdi" :path="mdiDownload" class="w-5 h-5" />
