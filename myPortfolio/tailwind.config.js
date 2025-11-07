@@ -6,7 +6,19 @@ export default {
         "./src/**/*.{vue,js,ts,jsx,tsx,svg}",
     ],
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                accentText: '#3A5A40',
+                linkText: '#47704c',
+                darkAccentText: '#dbe4ca',
+                darkLinkText: '#B5C99A',
+                button: '#E6EEDB',
+                buttonHover: '#d9e4c9',
+                card: '#F4F7F2',
+                darkCard: '#282928',
+                darkBackGround: '#363636',
+            },
+        },
     },
     plugins: [],
 }
