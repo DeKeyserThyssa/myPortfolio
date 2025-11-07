@@ -31,6 +31,7 @@ watch(isDark, (newValue) => {
 const navLinks = [
   { name: "About", to: "/about" },
   { name: "Experience", to: "/experience" },
+  { name: "Skills", to: "/skills" },
 ];
 
 function toggleDarkMode() {
@@ -54,6 +55,7 @@ function toggleMenu() {
           v-for="link in navLinks"
           :key="link.to"
           :to="link.to"
+          :title="link.name"
           class="hover:text-accentText dark:hover:text-darkAccentText"
           :class="route.path === link.to ? 'text-linkText dark:text-darkLinkText font-semibold' : ''"
       >
@@ -97,6 +99,7 @@ function toggleMenu() {
             v-for="link in navLinks"
             :key="link.to"
             :to="link.to"
+            :title="link.name"
             class="px-4 py-2 hover:text-accentText dark:hover:text-darkAccentText"
             @click="isMenuOpen = false"
             :class="route.path === link.to ? 'text-linkText dark:text-darkLinkText font-semibold' : ''"
