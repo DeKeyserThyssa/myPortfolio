@@ -32,14 +32,28 @@ const toggle = () => (open.value = !open.value);
         <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">
           {{ title }}
         </h3>
-        <p class="text-sm text-gray-600 dark:text-gray-200">
-          {{ company }} • {{ period }}
-          <span v-if="place.length"> • </span>
-          <span v-for="(p, i) in place" :key="i" class="inline-flex items-center space-x-1">
-            <FlagIcon :code="p.countryCode" />
-            <span>{{ p.city }}</span>
-            <span v-if="i < place.length - 1" class="pr-1">&</span>
-          </span>
+        <p class="text-sm text-gray-600 dark:text-gray-200 flex flex-wrap items-center">
+          <!-- company -->
+          <span class="whitespace-nowrap">{{ company }}</span>
+
+          <!-- period -->
+          <span class="whitespace-nowrap">&nbsp;•&nbsp;{{ period }}</span>
+
+          <!-- locations -->
+          <template v-if="place.length">
+            <span class="whitespace-nowrap">&nbsp;•&nbsp;</span>
+            <span class="inline-flex flex-wrap items-center gap-x-2">
+              <span
+                  v-for="(p, i) in place"
+                  :key="i"
+                  class="inline-flex items-center space-x-1 whitespace-nowrap"
+              >
+                <FlagIcon :code="p.countryCode" />
+                <span>{{ p.city }}</span>
+                <span v-if="i < place.length - 1">&</span>
+              </span>
+            </span>
+          </template>
         </p>
       </div>
 

@@ -48,7 +48,7 @@
 </script>
 
 <template>
-  <p class="pb-2">
+  <p class="pb-2 sm:mt-10">
     Hi, I’m <span class="font-bold">Thyssa</span>,
     a Full-Stack Developer with over two years of professional experience
     in building scalable and user-focused digital solutions.

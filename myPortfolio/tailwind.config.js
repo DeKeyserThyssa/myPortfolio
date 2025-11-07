@@ -15,7 +15,7 @@ export default {
                 button: '#E6EEDB',
                 buttonHover: '#d9e4c9',
                 card: '#F4F7F2',
-                darkCard: '#081c15',
+                darkCard: '#282928',
                 darkBackGround: '#363636',
             },
         },

@@ -58,7 +58,7 @@ const educations = [
     ],
   },
   {
-    title: "Business education - Secondary Education",
+    title: "Business Education (Handel) - Secondary Education",
     company: "Groenhove",
     period: "2017 - 2019",
     place: [
@@ -70,7 +70,7 @@ const educations = [
 
 <template>
   <section class="max-w-2xl mx-auto sm:mt-10">
-    <h2 class="text-2xl font-bold mb-6">Work experience</h2>
+    <h2 class="text-2xl font-bold mb-6">Work Experience</h2>
 
     <ExperienceCard
         v-for="(exp, index) in workExperiences"
