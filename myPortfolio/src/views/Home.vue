@@ -1,7 +1,6 @@
 <script setup>
 import {onMounted, ref} from "vue";
-import SvgIcon from "@jamescoyle/vue-icon";
-import {mdiLaptop} from "@mdi/js";
+import { BxCodeBlock } from '@kalimahapps/vue-icons';
 
 const messages = [
   "React",
@@ -42,7 +41,7 @@ onMounted(() => {
       <h3
           class="flex items-center flex-row gap-4 text-lg sm:text-xl font-medium text-accentText bg-button px-4 py-2 rounded-xl shadow-sm"
       >
-        <SvgIcon type="mdi" :path="mdiLaptop" />
+        <BxCodeBlock class="w-8 h-8"/>
         <span class="font-bold">{{ message }}</span>
       </h3>
     </div>

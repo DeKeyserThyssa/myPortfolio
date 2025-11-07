@@ -2,14 +2,7 @@
 import Logo from "@/components/logo.vue";
 import { ref, onMounted, watch } from "vue";
 import { useRoute } from "vue-router";
-import SvgIcon from "@jamescoyle/vue-icon";
-import {
-  mdiWhiteBalanceSunny,
-  mdiMoonWaxingCrescent,
-  mdiDownload,
-  mdiMenu,
-  mdiClose,
-} from "@mdi/js";
+import { AkDownload, ByMenu, CdClose, BsMoonFill, FlFilledWeatherSunny } from '@kalimahapps/vue-icons';
 
 const isDark = ref(false);
 const isMenuOpen = ref(false);
@@ -72,25 +65,25 @@ function toggleMenu() {
           class="px-3 py-1.5 rounded-xl bg-button text-black flex items-center gap-2 hover:bg-buttonHover"
       >
         Resume
-        <SvgIcon type="mdi" :path="mdiDownload" class="w-5 h-5" />
+        <AkDownload/>
       </a>
 
       <button @click="toggleDarkMode" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-neutral-800">
-        <SvgIcon v-if="isDark" type="mdi" :path="mdiMoonWaxingCrescent" class="w-5 h-5" />
-        <SvgIcon v-else type="mdi" :path="mdiWhiteBalanceSunny" class="w-5 h-5 rotate-[15deg]" />
+        <BsMoonFill v-if="isDark" class="w-5 h-5 -scale-x-100" />
+        <FlFilledWeatherSunny v-else class="w-5 h-5" />
       </button>
     </div>
 
     <!-- Mobile Menu Button -->
     <div class="md:hidden flex items-center space-x-3">
       <button @click="toggleDarkMode" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-neutral-800">
-        <SvgIcon v-if="isDark" type="mdi" :path="mdiMoonWaxingCrescent" class="w-5 h-5" />
-        <SvgIcon v-else type="mdi" :path="mdiWhiteBalanceSunny" class="w-5 h-5 rotate-[15deg]" />
+        <BsMoonFill v-if="isDark" class="w-5 h-5 -scale-x-100" />
+        <FlFilledWeatherSunny v-else class="w-5 h-5" />
       </button>
 
       <button @click="toggleMenu" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-neutral-800">
-        <SvgIcon v-if="!isMenuOpen" type="mdi" :path="mdiMenu" class="w-6 h-6" />
-        <SvgIcon v-else type="mdi" :path="mdiClose" class="w-6 h-6" />
+        <ByMenu v-if="!isMenuOpen" class="w-6 h-6" />
+        <CdClose v-else class="w-6 h-6" />
       </button>
     </div>
 
@@ -117,7 +110,7 @@ function toggleMenu() {
             @click="isMenuOpen = false"
         >
           Resume
-          <SvgIcon type="mdi" :path="mdiDownload" class="w-4 h-4" />
+          <AkDownload class="w-4 h-4"/>
         </a>
       </div>
     </Transition>

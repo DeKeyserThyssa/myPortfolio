@@ -1,7 +1,6 @@
 <script setup>
   import {computed} from "vue";
-  import SvgIcon from "@jamescoyle/vue-icon";
-  import { mdiGithub, mdiLinkedin } from "@mdi/js";
+  import { AkGithubFill, AkLinkedinBoxFill } from '@kalimahapps/vue-icons';
 
   const props =  defineProps({
     platform: String,
@@ -9,8 +8,8 @@
   })
 
   const platformIcons = {
-    github: mdiGithub,
-    linkedin: mdiLinkedin,
+    github: AkGithubFill,
+    linkedin: AkLinkedinBoxFill,
   };
   const iconPath = platformIcons[props.platform.toLowerCase()];
 
@@ -19,7 +18,7 @@
 
 <template>
   <a :href="profileUrl" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2">
-    <SvgIcon v-if="iconPath" type="mdi" :path="iconPath" class="w-5 h-5" />
+    <component v-if="iconPath" :is="iconPath" class="w-5 h-5"/>
     <span class="capitalize">{{ props.platform }}</span>
   </a>
 </template>

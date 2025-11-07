@@ -1,8 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import FlagIcon from "@/components/FlagIcon.vue";
-import SvgIcon from "@jamescoyle/vue-icon";
-import { mdiChevronUp, mdiChevronDown } from "@mdi/js";
+import { AkChevronUp, AkChevronDown } from '@kalimahapps/vue-icons';
 
 const props = defineProps({
   title: String,
@@ -45,8 +44,8 @@ const toggle = () => (open.value = !open.value);
       </div>
 
       <div v-if="details.length">
-        <SvgIcon v-if="open" type="mdi" :path="mdiChevronUp" class="w-5 h-5" />
-        <SvgIcon v-else type="mdi" :path="mdiChevronDown" class="w-5 h-5" />
+        <AkChevronUp v-if="open" class="w-5 h-5" />
+        <AkChevronDown v-else class="w-5 h-5" />
       </div>
     </div>
 
