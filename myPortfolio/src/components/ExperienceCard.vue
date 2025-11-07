@@ -23,8 +23,12 @@ const toggle = () => (open.value = !open.value);
 </script>
 
 <template>
-  <div class="bg-card dark:bg-darkCard rounded-2xl shadow-md p-4 mb-4 transition-all duration-300">
-    <div class="flex justify-between items-center cursor-pointer" @click="toggle">
+  <div
+    class="bg-card dark:bg-darkCard rounded-2xl shadow-md p-4 mb-4 transition-all duration-300"
+    :class="details.length ? 'cursor-pointer' : 'cursor-default'"
+    @click="details.length && toggle()"
+  >
+    <div class="flex justify-between items-center">
       <div>
         <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">
           {{ title }}
@@ -39,13 +43,16 @@ const toggle = () => (open.value = !open.value);
           </span>
         </p>
       </div>
-      <SvgIcon v-if="open" type="mdi" :path="mdiChevronUp" class="w-5 h-5"/>
-      <SvgIcon v-else type="mdi" :path="mdiChevronDown" class="w-5 h-5"/>
+
+      <div v-if="details.length">
+        <SvgIcon v-if="open" type="mdi" :path="mdiChevronUp" class="w-5 h-5" />
+        <SvgIcon v-else type="mdi" :path="mdiChevronDown" class="w-5 h-5" />
+      </div>
     </div>
 
     <transition name="fade">
       <div
-          v-if="open"
+          v-if="open && details.length"
           class="mt-3 border-t border-gray-200 dark:border-gray-700 pt-3 text-gray-700 dark:text-gray-200"
       >
         <ul class="list-disc pl-5 space-y-2">

@@ -35,6 +35,11 @@ watch(isDark, (newValue) => {
   }
 });
 
+const navLinks = [
+  { name: "About", to: "/about" },
+  { name: "Experience", to: "/experience" },
+];
+
 function toggleDarkMode() {
   isDark.value = !isDark.value;
 }
@@ -52,15 +57,14 @@ function toggleMenu() {
 
     <!-- Desktop Menu -->
     <div class="hidden md:flex items-center space-x-6 text-sm font-medium">
-      <RouterLink to="/about" class="hover:text-accentText dark:hover:text-darkAccentText"
-       :class="route.path === '/about' ? 'text-accentText dark:text-darkAccentText font-semibold' : ''"
+      <RouterLink
+          v-for="link in navLinks"
+          :key="link.to"
+          :to="link.to"
+          class="hover:text-accentText dark:hover:text-darkAccentText"
+          :class="route.path === link.to ? 'text-linkText dark:text-darkLinkText font-semibold' : ''"
       >
-        About
-      </RouterLink>
-      <RouterLink to="/experience" class="hover:text-accentText dark:hover:text-darkAccentText"
-        :class="route.path === '/experience' ? 'text-accentText dark:text-darkAccentText font-semibold' : ''"
-      >
-        Experience
+        {{ link.name }}
       </RouterLink>
 
       <a
@@ -97,11 +101,14 @@ function toggleMenu() {
           class="absolute top-full right-0 mt-2 w-40 bg-white dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700 rounded-xl shadow-lg flex flex-col text-sm font-medium z-50"
       >
         <RouterLink
-            to="/about"
-            class="px-4 py-2 hover:bg-gray-100 dark:hover:bg-neutral-700 rounded-t-xl"
+            v-for="link in navLinks"
+            :key="link.to"
+            :to="link.to"
+            class="px-4 py-2 hover:text-accentText dark:hover:text-darkAccentText"
             @click="isMenuOpen = false"
+            :class="route.path === link.to ? 'text-linkText dark:text-darkLinkText font-semibold' : ''"
         >
-          About
+          {{ link.name }}
         </RouterLink>
 
         <a

@@ -54,7 +54,7 @@
     in building scalable and user-focused digital solutions.
     I hold a degree in
     <a href="https://mct.be/"
-    ><span class="font-bold text-accentText dark:text-darkAccentText hover:underline">MCT (Multimedia & Creative Technologies)</span></a
+    ><span class="font-bold text-linkText dark:text-darkLinkText hover:underline">MCT (Multimedia & Creative Technologies)</span></a
     >
     from Howest University in Kortrijk.
   </p>

@@ -1,7 +1,7 @@
 <script setup>
 import ExperienceCard from "@/components/ExperienceCard.vue";
 
-const experiences = [
+const workExperiences = [
   {
     title: "Junior Software Developer",
     company: "Tailormade Logistics",
@@ -35,7 +35,7 @@ const experiences = [
     ],
   },
   {
-    title: "Internship Frontend Developer",
+    title: "Internship Frontend Developer & Designer",
     company: "Sweet Mustard",
     period: "02/2023 - 06/2023",
     place: [
@@ -48,20 +48,51 @@ const experiences = [
     ],
   },
 ];
+const educations = [
+  {
+    title: "Multimedia & Creative Technologies",
+    company: "Howest",
+    period: "2019 - 2023",
+    place: [
+      { countryCode: "be", city: "Kortrijk" },
+    ],
+  },
+  {
+    title: "Business education - Secondary Education",
+    company: "Groenhove",
+    period: "2017 - 2019",
+    place: [
+      { countryCode: "be", city: "Waregem" },
+    ],
+  },
+];
 </script>
 
 <template>
-  <section class="max-w-2xl mx-auto mt-10">
-    <h2 class="text-2xl font-bold mb-6">Experience</h2>
+  <section class="max-w-2xl mx-auto sm:mt-10">
+    <h2 class="text-2xl font-bold mb-6">Work experience</h2>
 
     <ExperienceCard
-        v-for="(exp, index) in experiences"
+        v-for="(exp, index) in workExperiences"
         :key="index"
         :title="exp.title"
         :company="exp.company"
         :period="exp.period"
         :place="exp.place"
         :details="exp.details"
+    />
+  </section>
+
+  <section class="max-w-2xl mx-auto mt-10">
+    <h2 class="text-2xl font-bold mb-6">Education</h2>
+
+    <ExperienceCard
+        v-for="(exp, index) in educations"
+        :key="index"
+        :title="exp.title"
+        :company="exp.company"
+        :period="exp.period"
+        :place="exp.place"
     />
   </section>
 </template>
