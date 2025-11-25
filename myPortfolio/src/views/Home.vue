@@ -33,7 +33,7 @@ const topSkills = [
         <img
             src="/portfoliofoto.jpg"
             alt="Portfolio"
-            class="w-48 sm:w-60 md:w-72 lg:w-80 rounded-full shadow-md border border-neutral-200 object-cover"
+            class="w-48 sm:w-60 md:w-72 lg:w-80 rounded-full shadow-md border border-neutral-200 dark:border-neutral-800 object-cover"
         />
       </div>
     </section>
